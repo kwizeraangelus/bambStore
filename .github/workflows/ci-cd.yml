@@ -1,0 +1,75 @@
+name: Bambe CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker images
+        run: docker compose build
+
+      - name: Start services
+        run: docker compose up -d
+
+      - name: Wait for application
+        run: |
+          echo "Waiting for Bambe to be ready..."
+          for i in $(seq 1 30); do
+            if curl -sf http://localhost:8080/health.php > /dev/null; then
+              echo "Application is ready!"
+              exit 0
+            fi
+            echo "Attempt $i/30 - waiting..."
+            sleep 5
+          done
+          echo "Application failed to start"
+          docker compose logs
+          exit 1
+
+      - name: Run health check
+        run: |
+          response=$(curl -s http://localhost:8080/health.php)
+          echo "Health response: $response"
+          echo "$response" | grep -q '"status":"ok"'
+
+      - name: Test homepage
+        run: curl -sf http://localhost:8080/index.php | grep -q "Bambe"
+
+      - name: Test products page
+        run: curl -sf http://localhost:8080/products.php | grep -q "product-card"
+
+      - name: Stop services
+        if: always()
+        run: docker compose down -v
+
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy notification
+        run: |
+          echo "============================================"
+          echo "Bambe CI/CD Pipeline - Deploy Stage"
+          echo "============================================"
+          echo "Build and tests passed successfully!"
+          echo ""
+          echo "To deploy to production, configure one of:"
+          echo "  - Railway: railway up"
+          echo "  - Render: connect GitHub repo"
+          echo "  - VPS: docker compose up -d on server"
+          echo ""
+          echo "See README.md for deployment instructions."
