@@ -7,3 +7,5 @@ Thumbs.db
 .vscode/
 vendor/
 node_modules/
+uploads/products/*
+!uploads/products/.gitkeep

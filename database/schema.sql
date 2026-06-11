@@ -58,6 +58,14 @@ CREATE TABLE order_items (
     FOREIGN KEY (product_id) REFERENCES products(id) ON DELETE CASCADE
 );
 
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password_hash VARCHAR(255) NOT NULL,
+    full_name VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Categories
 INSERT INTO categories (name, slug, description) VALUES
 ('Clothes', 'clothes', 'Trendy clothing for men and women'),
@@ -84,3 +92,7 @@ INSERT INTO products (category_id, name, slug, description, price, image_url, st
 (2, 'Sport Sandals - Outdoor', 'sport-sandals-outdoor', 'Rugged sport sandals for outdoor activities. Adjustable straps and grip sole.', 38000.00, 'https://images.unsplash.com/photo-1603487743391-5e37b7e5c1a8?w=600&h=600&fit=crop', 35, 0),
 (2, 'Kids School Shoes', 'kids-school-shoes', 'Durable black school shoes for children. Comfortable all-day wear.', 35000.00, 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&h=600&fit=crop', 50, 0),
 (2, 'Basketball High-Tops', 'basketball-high-tops', 'Classic high-top basketball shoes with ankle support. Bold red and white design.', 72000.00, 'https://images.unsplash.com/photo-1511556532299-6fae28f8f0e0?w=600&h=600&fit=crop', 18, 1);
+
+-- Default admin (username: admin, password: admin123)
+INSERT INTO admins (username, password_hash, full_name) VALUES
+('admin', '$2y$10$0oU1rpsxqRtva1TwZFxSSOT70VxgbCkP7ZQ2YhjoXFgr5O0grKH/u', 'Bambe Administrator');

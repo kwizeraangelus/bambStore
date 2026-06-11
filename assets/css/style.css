@@ -1218,6 +1218,18 @@ ul {
     font-size: 0.9rem;
 }
 
+.footer__admin-link {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.footer__admin-link:hover {
+    opacity: 1;
+    color: var(--color-accent);
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .features__grid {

@@ -11,13 +11,23 @@ A modern e-commerce web application for **Bambe**, a Rwanda-based online fashion
 
 ## Features
 
+### Customer Store
 - Responsive homepage with navigation and hero section
 - Product listing with category filters and search
 - Product detail pages with quantity selector
 - Shopping cart (add, remove, update quantities, totals)
 - Checkout with customer details and order summary
 - Order confirmation page
-- MySQL database for products, customers, and orders
+
+### Admin Panel (`/admin`)
+- Secure admin login
+- **Dashboard** with revenue, orders, sales charts, and top products
+- **Product management** — add, edit, delete products with image upload
+- **Order management** — view orders and update status (pending → delivered)
+- Analytics statistics for business insights
+
+### Infrastructure
+- MySQL database for products, customers, orders, and admins
 - Docker containerization
 - GitHub Actions CI/CD pipeline
 
@@ -58,6 +68,16 @@ bambe/
 ├── docker-compose.yml
 └── README.md
 ```
+
+## Admin Access
+
+| Field | Value |
+|-------|-------|
+| URL | http://localhost:8080/admin/login.php |
+| Username | `admin` |
+| Password | `admin123` |
+
+> Change the default password before deploying to production.
 
 ## Quick Start with Docker
 
@@ -127,6 +147,7 @@ The `database/schema.sql` file creates:
 - **customers** - Customer delivery information
 - **orders** - Order records with status
 - **order_items** - Line items per order
+- **admins** - Admin users for the management panel
 
 ## CI/CD Pipeline
 

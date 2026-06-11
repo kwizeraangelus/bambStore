@@ -31,6 +31,7 @@
             </div>
             <div class="footer__bottom">
                 <p>&copy; <?= date('Y') ?> Bambe Fashion Store. All rights reserved.</p>
+                <p><a href="admin/login.php" class="footer__admin-link">Admin</a></p>
             </div>
         </div>
     </footer>
