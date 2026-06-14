@@ -171,6 +171,15 @@ ul {
     display: flex;
 }
 
+.header__login {
+    white-space: nowrap;
+    padding: 8px 18px;
+}
+
+.nav__login-mobile {
+    display: none;
+}
+
 .cart-link {
     position: relative;
     display: flex;
@@ -1277,6 +1286,22 @@ ul {
 
     .search-form {
         display: none;
+    }
+
+    .header__login {
+        display: none;
+    }
+
+    .nav__login-mobile {
+        display: block;
+    }
+
+    .nav__list .nav__link--login {
+        display: block;
+        text-align: center;
+        margin-top: 8px;
+        border: 2px solid var(--color-primary);
+        border-radius: var(--radius);
     }
 
     .hero__inner {

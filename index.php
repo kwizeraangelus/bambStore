@@ -21,7 +21,7 @@ require_once __DIR__ . '/includes/header.php';
             </div>
         </div>
         <div class="hero__image">
-            <img src="https://images.unsplash.com/photo-1441984904996-e0b6a687bd02?w=800&h=600&fit=crop" alt="Bambe fashion collection">
+            <img src="assets/dus.jpeg" alt="Bambe fashion collection">
         </div>
     </div>
 </section>
