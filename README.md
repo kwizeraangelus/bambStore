@@ -7,7 +7,7 @@ A modern e-commerce web application for **Bambe**, a Rwanda-based online fashion
 > Deploy using Docker (see below) or host on Railway/Render. Update this URL after deployment.
 
 - **Local:** http://localhost:8080
-- **GitHub:** Add your repository link here
+- **GitHub:** https://github.com/kwizeraangelus/bambStore/
 
 ## Features
 
@@ -33,13 +33,13 @@ A modern e-commerce web application for **Bambe**, a Rwanda-based online fashion
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | HTML5, CSS3, JavaScript |
-| Backend | PHP 8.2 |
-| Database | MySQL 8.0 |
-| Container | Docker, Docker Compose |
-| CI/CD | GitHub Actions |
+| Layer     |         Technology             |
+|-------    |--------------------------------|
+| Frontend  |       HTML5, CSS3, JavaScript  |
+| Backend   |       PHP 8.2                  |
+| Database  |       MySQL 8.0                |
+| Container |       Docker, Docker Compose   |
+| CI/CD     |       GitHub Actions           |
 
 ## Project Structure
 
@@ -71,13 +71,12 @@ bambe/
 
 ## Admin Access
 
-| Field | Value |
-|-------|-------|
-| URL | http://localhost:8080/admin/login.php |
-| Username | `admin` |
-| Password | `admin123` |
+| Field    | Value                                 |
+|----------|-------                                |
+| URL      | http://localhost:8080/admin/login.php |
+| Username | `admin`                               |
+| Password | `admin123`                            |
 
-> Change the default password before deploying to production.
 
 ## Quick Start with Docker
 
@@ -89,7 +88,7 @@ bambe/
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/kwizeraangelus/bambStore
 cd bambe
 
 # Build and start containers
@@ -159,7 +158,7 @@ GitHub Actions workflow (`.github/workflows/ci-cd.yml`):
 
 ## Deployment Options
 
-### Railway / Render
+### HOSTINGER
 
 1. Push code to GitHub
 2. Connect repository to Railway or Render
@@ -167,7 +166,7 @@ GitHub Actions workflow (`.github/workflows/ci-cd.yml`):
 4. Set environment variables: `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`
 5. Deploy using the Dockerfile
 
-### VPS (DigitalOcean, AWS, etc.)
+
 
 ```bash
 git clone <repo-url>
