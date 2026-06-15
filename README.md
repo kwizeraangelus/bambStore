@@ -1,5 +1,6 @@
 # Bambe - Clothes & Shoes E-Commerce Store
-
+Name: kwizera angelsu
+regnumber:22654/2023
 A modern e-commerce web application for **Bambe**, a Rwanda-based online fashion store selling clothes and shoes. Built with HTML, CSS, PHP, JavaScript, and MySQL.
 
 ## Live Demo
