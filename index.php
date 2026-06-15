@@ -69,7 +69,7 @@ require_once __DIR__ . '/includes/header.php';
                 <p>Quick delivery across Kigali and nationwide shipping</p>
             </div>
             <div class="feature">
-                <div class="feature__icon">✨</div>
+                <div class="feature__icon"></div>
                 <h3>Quality Products</h3>
                 <p>Carefully selected clothes and shoes from trusted brands</p>
             </div>

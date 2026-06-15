@@ -11,6 +11,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN a2enmod rewrite
 
+# Fix: Explicitly disable conflicting MPMs to ensure only pre-fork runs
+RUN a2dismod mpm_event mpm_worker || true
+
 COPY . /var/www/html/
 
 RUN mkdir -p /var/www/html/uploads/products \
