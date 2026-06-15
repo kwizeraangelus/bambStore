@@ -8,6 +8,7 @@ A modern e-commerce web application for **Bambe**, a Rwanda-based online fashion
 
 - **Local:** http://localhost:8080
 - **GitHub:** https://github.com/kwizeraangelus/bambStore/
+- hosted:**  https://lightslategray-mink-727528.hostingersite.com/
 
 ## Features
 
