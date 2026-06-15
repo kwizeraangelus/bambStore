@@ -70,6 +70,7 @@ bambe/
 └── README.md
 ```
 
+
 ## Admin Access
 
 | Field    | Value                                 |
@@ -178,12 +179,16 @@ docker compose up -d --build
 ## Screenshots
 
 Take screenshots of:
-- Homepage
-- Product listing
-- Product details
-- Shopping cart
-- Checkout
-- Order confirmation
+![Homepage](exams/angho.png)
+![Homepage](exams/angehoo.png)
+![Homepage](exams/angepr.png)
+![Homepage](exams/detail.png)
+![Homepage](exams/ai_inter.png)
+![Homepage](exams/angsta.png)
+![Homepage](exams/angeadmp.png)
+![Homepage](exams/crea.png)
+![Homepage](exams/oder.png)
+
 
 ## License
 
