@@ -149,7 +149,15 @@ Bambe Fashion Store needed a modern online platform that would:
 
 ## 7. Screenshots
 
-> *Insert screenshots when submitting your report (PDF or Word).*
+![Homepage](exams/angho.png)
+![Homepage](exams/angehoo.png)
+![Homepage](exams/angepr.png)
+![Homepage](exams/detail.png)
+![Homepage](exams/ai_inter.png)
+![Homepage](exams/angsta.png)
+![Homepage](exams/angeadmp.png)
+![Homepage](exams/crea.png)
+![Homepage](exams/oder.png)
 
 Recommended screenshots:
 
